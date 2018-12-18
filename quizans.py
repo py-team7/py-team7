@@ -1,3 +1,3 @@
-import quizapp from Question
+from quizapp import Question
 
 class Answer:
