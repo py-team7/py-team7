@@ -18,47 +18,51 @@ class Question:
                         ]
         self.win = win
         self.num = 0
+        self.redraw(0)
 
-    #消去
-    def undraw(self):
-        self.message_ans.undraw()
-        self.message_right.undraw()
-    
-    #問題数の取得
+    def redraw(self, num):
+        if  num == 1:
+            self.message_quiz.undraw()
+
+        if  num == 2:
+            self.message_ans.undraw()
+        
+        if  num == 3:
+            self.message_right.undraw()
+
+        if  num == 4:
+            self.message_ans.undraw()
+            self.message_right.undraw()
+
     def quizlen(self):
         length = len(self.questions)
         return length
-    
-    #問題文の取得
+
     def getquiz(self, num):
         self.num = num
         self.question = self.questions[self.num]["question"]
         return self.question
 
-    #解答の取得
     def getanswer(self):
         self.answer = self.questions[self.num]["answer"]
         return self.answer
     
-    #問題文の表示
     def lookquiz(self):
         if self.num != 0:
-            self.message_quiz.undraw()
+            self.redraw(1)
         self.message_quiz = Text(Point(40, 140), self.questions[self.num]["question"])
         self.message_quiz.setSize(24)
         self.message_quiz.draw(self.win)
 
-    #解説の表示
     def lookans(self):
         if self.num!= 0:
-            self.message_ans.undraw()
+            self.redraw(2)
         self.message_ans = Text(Point(100, 30), self.questions[self.num]["comment"])
         self.message_ans.draw(self.win)
-    
-    #合否の表示
+
     def lookright(self, ans):
         if self.num!= 0:
-            self.message_right.undraw()
+            self.redraw(3)
         if(self.answer == ans):
             self.message_right = Text(Point(100, 85), "Yeah! Got it!")
             self.message_right.setFill("blue")
@@ -128,7 +132,7 @@ class Launch:
             while(next == False):
                 next = self.button.next()
             
-            self.quiz.undraw()
+            self.quiz.redraw(4)
         
         self.quiz.result(self.count)
             
