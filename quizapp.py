@@ -1,3 +1,4 @@
+#quizapp.py
 from quizans import *
 from graphics import *
 from button import Button
@@ -90,7 +91,7 @@ class Question:
 
 class Launch:
     def __init__(self):
-        self.win = GraphWin("A or P Quiz", 800, 600)
+        self.win = GraphWin("Idol or Program Quiz", 800, 600)
         self.win.setCoords(0, 0, 200, 150)
         self.win.setBackground("white")
 
