@@ -7,7 +7,7 @@ If you play this game you will unexpectedly notice that the two names resemble e
 There are 10 quizzes in all.
 Well, how many quizzes can you answer?
 
-how to play
+How to play
 
 ・Please click only once.
 
