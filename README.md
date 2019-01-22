@@ -8,6 +8,7 @@ There are 10 quizzes in all.
 Well, how many quizzes can you answer?
 
 how to play
+
 ・Please click only once.
 
 ・If you acquire 1 point, 8 points or more in 1 correct answer, you passed.
